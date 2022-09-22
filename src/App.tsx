@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import FooterComponent from "./components/_Footer/FooterComponent"
 import HeaderComponent from "./components/_Header/HeaderComponent"
 import ImgBox from "./components/_ImgBox/ImgBox"
@@ -6,7 +6,18 @@ import './styles/globals.css'
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
 
 
+
 const App = () => {
+  const [distance, setDistance] = useState<number>(1)
+
+  //calculate the distance between the cursor and the center/middle of the browser
+
+  const easing = (num:number) => Math.pow(num, 3)
+
+
+
+
+
 
 const matrix:Array<number[]> = [
   [0, 0], [1, 0], [2, 0], [3, 0],
