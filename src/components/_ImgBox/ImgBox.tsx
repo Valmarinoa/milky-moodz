@@ -12,11 +12,7 @@ const ImgBox = ({x, y}: _MatrixProps) => {
   console.log("axis: Y", y)
 
   return (
-    <div className='img-container'>
-      {/* <div className='image-styled-component'></div> */}
       <Image $initialX={x} $initialY={y}/>
-
-    </div>
   )
 }
 
