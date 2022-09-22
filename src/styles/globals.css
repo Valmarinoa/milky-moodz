@@ -24,13 +24,13 @@
     @apply  text-[64px] leading-3 m-0 p-[15px] flex-grow relative text-center after:content-[''] after:block after:bg-white after:absolute after:h-1 after:gap-x-1 after:top-[55%] 
   } */
 
-  .img-container {
+  /* .img-container { */
     /* h-[600px] w-[400px] these are specific to image aspect ratio value, and we use it to define our image container's height and width.
     The flex wrap rule tells children elements to wrap up into different lines */
-    @apply flex flex-wrap relative h-[600px] w-[400px] justify-center 
-  }
+    /* @apply flex flex-wrap relative h-[600px] w-[400px] justify-center 
+  } */
 
-  .wrapper {
+  /* .wrapper {
     @apply flex justify-center items-center h-screen w-screen
-  }
+  } */
 }
