@@ -11,10 +11,16 @@ const App = () => {
   const [distance, setDistance] = useState<number>(1)
 
   //calculate the distance between the cursor and the center/middle of the browser
-
+  // Math.pow(i, z) uses the first argument as a base(num) and takes that to the power of the given exponent(3)
+  // https://easings.net/#easeInCubic
   const easing = (num:number) => Math.pow(num, 3)
 
+  const calculateDistance = (x:number, y:number) => {
+    const center = [window.innerWidth / 2, window.innerHeight / 2]
+    const maxHypot = Math.hypot(center[0], center[1])
+    const hypot = Math.hypot(center[0] - x, center[1] - y)
 
+  }
 
 
 
@@ -27,8 +33,6 @@ const matrix:Array<number[]> = [
   [0, 4], [1, 4], [2, 4], [3, 4], 
   [0, 5], [1, 5], [2, 5], [3, 5]
 ]
-
-console.log(matrix)
 
   return (
     <>
