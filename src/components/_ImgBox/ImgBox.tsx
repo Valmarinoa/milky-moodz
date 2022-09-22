@@ -8,8 +8,6 @@ interface _MatrixProps {
 }
 
 const ImgBox = ({x, y}: _MatrixProps) => {
-  console.log("axis: X", x)
-  console.log("axis: Y", y)
 
   return (
       <Image $initialX={x} $initialY={y}/>

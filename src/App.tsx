@@ -5,9 +5,14 @@ import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
 
-interface Clients {
+// interface _Touches {
+//   touches: _Clients
+// }
+
+
+interface _Clients {
   clientY: number;
-  clientX: number
+  clientX: number;
 }
 
 const App = () => {
@@ -28,10 +33,15 @@ const App = () => {
     setDistance(easeDistance)
   }
 
-
-  const handleMove = ({clientX, clientY}:Clients) => {
+  const handleMove = ({ clientX, clientY }: _Clients) => {
     calculateDistance([clientX, clientY])
   }
+
+  const handleTouchMove:React.TouchEventHandler = ({touches}) => {
+    calculateDistance([touches[0].clientX, touches[0].clientY])
+  }
+
+  console.log("Here's the distance value:",distance)
 
   const matrix: Array<number[]> = [
     [0, 0], [1, 0], [2, 0], [3, 0],
@@ -47,7 +57,7 @@ const App = () => {
       <GlobalStyle />
       <HeaderComponent />
       <FooterComponent />
-      <Wrapper onMouseMove={handleMove} >
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
         <ImageContainer>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} />
