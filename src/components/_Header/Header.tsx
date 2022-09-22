@@ -1,13 +1,26 @@
 import React from 'react'
-import { ReactComponent as Logo } from './logo.svg'
+import styled from 'styled-components'
+import { ReactComponent as LogoSVG } from './logo.svg'
+import { Marginals } from "../../styles/global";
 
+export const Logo = styled(LogoSVG)`
+  height: auto;
+  max-width: 760px;
+  width: 100%
+`
 
-const index = () => {
+export const Header = styled.header`
+${Marginals}
+justify-content: center
+`
+
+const HeaderComponent = () => {
   return (
-    <div className='Header'>
-      <Logo className='w-full h-auto max-w-[760px]'/>
-    </div>
+    <Header>
+      {/* for SVGs: use title as a prop(similar to alt for images) to make it web accessible */}
+      <Logo title="Milky Mood Logo"/>
+    </Header>
   )
 }
 
-export default index
+export default HeaderComponent

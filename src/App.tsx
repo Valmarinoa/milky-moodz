@@ -1,8 +1,9 @@
 import React from "react"
-import Footer from "./components/_Footer/Footer"
+import FooterComponent from "./components/_Footer/FooterComponent"
 import Header from "./components/_Header/Header"
 import ImgBox from "./components/_ImgBox/index"
 import './styles/globals.css'
+import { GlobalStyle } from "./styles/global"
 
 
 const App = () => {
@@ -17,19 +18,15 @@ const matrix:Array<number[]> = [
 ]
 
   return (
-    <div className="App font-work ">
-      <header>
+    <div className="App">
+      <GlobalStyle />
         <Header />
-      </header>
       <div className="wrapper">
         {matrix.map(([x, y], i) => (
           <ImgBox key={i} x={x} y={y} />
         ))}
       </div>
-      
-      <footer>
-        <Footer />
-      </footer>
+        <FooterComponent />
     </div>
   )
 }
