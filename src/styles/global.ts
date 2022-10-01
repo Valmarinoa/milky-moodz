@@ -28,7 +28,6 @@ interface _Togetherness {
         background: #2828e6;
         font-family: 'Work Sans', sans-serif;
         font-weight: 500;
-        padding: 30px
     }
    `
 
