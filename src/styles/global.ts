@@ -2,6 +2,7 @@ import styled,{createGlobalStyle, css} from "styled-components"
 
 interface _Togetherness {
      $isTogether?: boolean;
+     $color: number
 }
 
  export const GlobalStyle = createGlobalStyle` 
@@ -52,7 +53,11 @@ interface _Togetherness {
         width: 400px;
    `
 
-   export const Wrapper = styled.section`
+   export const Wrapper = styled.section.attrs(({$color}:_Togetherness) => ({
+     style :{
+          backgroundColor:`hsl(${$color}, 79%, 53%)`
+     }
+   }))`
         display:flex;
         justify-content: center;
         align-items: center;

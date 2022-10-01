@@ -13,7 +13,8 @@ interface _Clients {
 }
 
 // interface _Togetherness {
-//   $isTogether: boolean;
+//   $isTogether?: boolean;
+//   $color: number
 // }
 
 const matrix: Array<number[]> = [
@@ -57,27 +58,19 @@ const App = () => {
     calculateDistance([touches[0].clientX, touches[0].clientY])
   }
 
-  console.log("Here's the distance value:",distance)
-
 
   return (
     <>
       <GlobalStyle />
       <HeaderComponent />
       <FooterComponent />
-      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
-        {/* <Glow > */}
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance *40)}>
         <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} percent={distance}/>
           ))}
         </ImageContainer>
-        {/* </Glow> */}
       </Wrapper>
-
-
-
-
     </>
   )
 }
