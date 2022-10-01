@@ -5,15 +5,25 @@ import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
 
-// interface _Touches {
-//   touches: _Clients
-// }
 
 
 interface _Clients {
   clientY: number;
   clientX: number;
 }
+
+// interface _Togetherness {
+//   $isTogether: boolean;
+// }
+
+const matrix: Array<number[]> = [
+  [0, 0], [1, 0], [2, 0], [3, 0],
+  [0, 1], [1, 1], [2, 1], [3, 1],
+  [0, 2], [1, 2], [2, 2], [3, 2],
+  [0, 3], [1, 3], [2, 3], [3, 3],
+  [0, 4], [1, 4], [2, 4], [3, 4],
+  [0, 5], [1, 5], [2, 5], [3, 5]
+]
 
 const App = () => {
   const [distance, setDistance] = useState<number>(1)
@@ -22,8 +32,13 @@ const App = () => {
   // Math.pow(i, z) uses the first argument as a base(num) and takes that to the power of the given exponent(3)
   // https://easings.net/#easeInCubic
   const easing = (num: number) => Math.pow(num, 3)
-
+ 
   const calculateDistance = ([x, y]: Array<number>) => {
+
+    // Find the position(coordinates: x,y) of the cursor in the window browser.
+    // Use Hypotheneuse to find the shortest distance between the cursor and the center of the browser.
+    // const distance calculates the distance as a percentage, based off the current value and the max. value
+    // ..giving a number between 0 ---> 1
     const center = [window.innerWidth / 2, window.innerHeight / 2]
     const maxHypot = Math.hypot(center[0], center[1])
     const hypot = Math.hypot(center[0] - x, center[1] - y)
@@ -33,6 +48,7 @@ const App = () => {
     setDistance(easeDistance)
   }
 
+  // returns mouse pointer position values x, y
   const handleMove = ({ clientX, clientY }: _Clients) => {
     calculateDistance([clientX, clientY])
   }
@@ -43,14 +59,6 @@ const App = () => {
 
   console.log("Here's the distance value:",distance)
 
-  const matrix: Array<number[]> = [
-    [0, 0], [1, 0], [2, 0], [3, 0],
-    [0, 1], [1, 1], [2, 1], [3, 1],
-    [0, 2], [1, 2], [2, 2], [3, 2],
-    [0, 3], [1, 3], [2, 3], [3, 3],
-    [0, 4], [1, 4], [2, 4], [3, 4],
-    [0, 5], [1, 5], [2, 5], [3, 5]
-  ]
 
   return (
     <>
@@ -58,11 +66,13 @@ const App = () => {
       <HeaderComponent />
       <FooterComponent />
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
-        <ImageContainer>
+        {/* <Glow > */}
+        <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], i) => (
-            <ImgBox key={i} x={x} y={y} />
+            <ImgBox key={i} x={x} y={y} percent={distance}/>
           ))}
         </ImageContainer>
+        {/* </Glow> */}
       </Wrapper>
 
 
