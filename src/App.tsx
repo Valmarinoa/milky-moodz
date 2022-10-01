@@ -3,7 +3,7 @@ import FooterComponent from "./components/_Footer/FooterComponent"
 import HeaderComponent from "./components/_Header/HeaderComponent"
 import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
-import { GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
+import { Button, GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
 
 
 
@@ -66,6 +66,8 @@ const App = () => {
       <FooterComponent />
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance *40)}>
         <ImageContainer $isTogether={distance < 0.001}>
+          
+          <Button>Vem falar oi!</Button>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} percent={distance}/>
           ))}

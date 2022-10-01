@@ -52,6 +52,30 @@ interface _Togetherness {
         width: 400px;
    `
 
+   export const Button = styled.button`
+   left: 50%;
+   top:50%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   background: none;
+   border-radius: 100%;
+   border: 2px solid #fbfbfb;
+   cursor: pointer;
+   font-size: 34px;
+   font-weight: 600;
+   line-height: 1;
+   text-transform: uppercase;
+   padding: 25px 0 ;
+   width: 300px;
+   z-index: 90;
+   font-family: 'Work Sans', sans-serif;
+
+   @media (max-width: 700px) {
+     font-size: 24px;
+     width: 220px;
+   }
+   `
+
    export const Wrapper = styled.section.attrs(({$color}:_Togetherness) => ({
      style :{
           backgroundColor:`hsl(${$color}, 79%, 53%)`

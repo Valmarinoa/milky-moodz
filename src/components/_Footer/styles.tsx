@@ -9,7 +9,7 @@ export const Footer = styled.footer`
 `
 
 export const H2 = styled.h2`
-  font-size: 44px;
+  font-size: 64px;
   font-weight: 600;
   line-height: 0.7;
   margin: 0;
