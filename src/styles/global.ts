@@ -1,7 +1,7 @@
 import styled,{createGlobalStyle, css} from "styled-components"
 
 interface _Togetherness {
-     $isTogether?: boolean;
+     $isTogether: boolean;
      $color: number
 }
 
@@ -42,7 +42,7 @@ interface _Togetherness {
 
    export const ImageContainer = styled.div.attrs(({$isTogether}: _Togetherness) => ({
      sytle: {
-          animation:  $isTogether ? 'glow 3s infinite alternate' : 'none'
+          animation: `${$isTogether} ? 'glow 3s infinite alternate' : 'none'`
      }
    }))`
         display: flex;
@@ -50,6 +50,18 @@ interface _Togetherness {
         position: relative;
         height: 600px;
         width: 400px;
+   `
+   
+   export const Wrapper = styled.section.attrs(({$color}:_Togetherness) => ({
+     style :{
+          backgroundColor:`hsl(${$color}, 79%, 53%)`
+     }
+   }))`
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
    `
 
    export const Button = styled.button`
@@ -76,14 +88,4 @@ interface _Togetherness {
    }
    `
 
-   export const Wrapper = styled.section.attrs(({$color}:_Togetherness) => ({
-     style :{
-          backgroundColor:`hsl(${$color}, 79%, 53%)`
-     }
-   }))`
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-   `
+

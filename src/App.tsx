@@ -4,6 +4,7 @@ import HeaderComponent from "./components/_Header/HeaderComponent"
 import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
 import { Button, GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
+import ModalComponent from "./components/_Modal/ModalComponent"
 
 
 
@@ -12,10 +13,10 @@ interface _Clients {
   clientX: number;
 }
 
-// interface _Togetherness {
-//   $isTogether?: boolean;
-//   $color: number
-// }
+interface _Togetherness {
+  $isTogether?: boolean;
+  $color: number
+}
 
 const matrix: Array<number[]> = [
   [0, 0], [1, 0], [2, 0], [3, 0],
@@ -26,8 +27,9 @@ const matrix: Array<number[]> = [
   [0, 5], [1, 5], [2, 5], [3, 5]
 ]
 
-const App = () => {
+const App = ({$isTogether}:_Togetherness) => {
   const [distance, setDistance] = useState<number>(1)
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   //calculate the distance between the cursor and the center/middle of the browser
   // Math.pow(i, z) uses the first argument as a base(num) and takes that to the power of the given exponent(3)
@@ -58,16 +60,21 @@ const App = () => {
     calculateDistance([touches[0].clientX, touches[0].clientY])
   }
 
+  const toggleModal = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    setShowModal((showModal => !showModal))
+  }
+
 
   return (
     <>
       <GlobalStyle />
+      { showModal && <ModalComponent onClick={toggleModal}/> }
       <HeaderComponent />
       <FooterComponent />
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance *40)}>
         <ImageContainer $isTogether={distance < 0.001}>
-          
-          <Button>Vem falar oi!</Button>
+          <Button onClick={toggleModal}>Vem falar oi!</Button>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} percent={distance}/>
           ))}
