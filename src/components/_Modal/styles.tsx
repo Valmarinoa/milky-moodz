@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-// interface _Toggle {
-//    toggleModal: React.MouseEventHandler<HTMLDivElement>;
-// }
+
 
 export const Modal = styled.div`
    left: 50%;
@@ -24,12 +22,12 @@ export const Modal = styled.div`
 `
 
 export const BG = styled.div`
-background: rgba(0, 0, 0, 0.5);
-cursor: pointer;
-height: 100vh;
-position: fixed;
-width: 100vw;
-z-index: 2;
+   background: rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+   height: 100vh;
+   position: fixed;
+   width: 100vw;
+   z-index: 2;
 `
 
 export const Close = styled.button`
@@ -65,7 +63,4 @@ export const Close = styled.button`
       right: 30px;
       top: 30px;
    }
-
-
-
 `
