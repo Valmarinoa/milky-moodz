@@ -1,16 +1,15 @@
 import React from 'react'
 import { Modal, BG } from './styles'
 
-// interface _Toggle {
-//     toggleModal: boolean;
-//     // onClick?: React.MouseEventHandler;
-// {toggleModal}:_Toggle}
+interface _Toggle {
+    toggleModal: React.MouseEventHandler<HTMLDivElement>;
+}
 
-const ModalComponent = () =>(
+const ModalComponent= ({toggleModal}: _Toggle) =>(
 
 
     <>
-        <BG/>
+        <BG onClick={toggleModal}/>
         <Modal />
     </>)
 
