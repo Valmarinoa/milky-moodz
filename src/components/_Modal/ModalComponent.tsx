@@ -8,7 +8,7 @@ interface _Toggle {
 const ModalComponent= ({toggleModal}:_Toggle) =>(
         <>
             <Modal>
-                <Close />
+                <Close onClick={toggleModal}/>
             </Modal>
             <BG onClick={toggleModal}/>
         </>
