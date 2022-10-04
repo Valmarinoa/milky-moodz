@@ -13,10 +13,6 @@ interface _Clients {
   clientX: number;
 }
 
-interface _Togetherness {
-  $isTogether?: boolean;
-  $color: number
-}
 
 const matrix: Array<number[]> = [
   [0, 0], [1, 0], [2, 0], [3, 0],
@@ -27,7 +23,7 @@ const matrix: Array<number[]> = [
   [0, 5], [1, 5], [2, 5], [3, 5]
 ]
 
-const App = ({$isTogether}:_Togetherness) => {
+const App = () => {
   const [distance, setDistance] = useState<number>(1)
   const [showModal, setShowModal] = useState<boolean>(false)
 
@@ -60,8 +56,7 @@ const App = ({$isTogether}:_Togetherness) => {
     calculateDistance([touches[0].clientX, touches[0].clientY])
   }
 
-  const toggleModal = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
+  const toggleModal = () => {
     setShowModal((showModal => !showModal))
   }
 
@@ -69,10 +64,10 @@ const App = ({$isTogether}:_Togetherness) => {
   return (
     <>
       <GlobalStyle />
-      { showModal && <ModalComponent onClick={toggleModal}/> }
+      { showModal && <ModalComponent toggleModal={toggleModal} /> }
       <HeaderComponent />
       <FooterComponent />
-      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance *40)}>
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance * 40)}>
         <ImageContainer $isTogether={distance < 0.001}>
           <Button onClick={toggleModal}>Vem falar oi!</Button>
           {matrix.map(([x, y], i) => (
