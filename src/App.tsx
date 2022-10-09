@@ -5,6 +5,7 @@ import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
 import { Button, GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
 import ModalComponent from "./components/_Modal/ModalComponent"
+import ModalInner from "./components/_ModalInner/ModalInner"
 
 
 
@@ -64,7 +65,11 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      { showModal && <ModalComponent toggleModal={toggleModal} /> }
+      { showModal &&
+       <ModalComponent toggleModal={toggleModal}>
+        <ModalInner />
+      </ModalComponent> 
+      }
       <HeaderComponent />
       <FooterComponent />
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance * 40)}>

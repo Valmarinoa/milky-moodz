@@ -1,19 +1,15 @@
 import styled from "styled-components";
-
-
+import { AbsoluteCenter } from "../../styles/global";
 
 export const Modal = styled.div`
-   left: 50%;
-   top:50%;
-   position: absolute;
-   transform: translate(-50%,-50%);
+  ${AbsoluteCenter};
    animation: glow 1s forwards;
    background-color: #fbfbfbfb;
    box-sizing: border-box;
    padding: 60px;
    max-width: 800px;
    width: calc(100vw - 60px);
-   z-index: 3;
+   z-index: 10;
 
    @media (max-width: 700px) {
     padding: 30px;
@@ -31,6 +27,7 @@ export const BG = styled.div`
 `
 
 export const Close = styled.button`
+cursor: pointer;
    background: transparent;
    cursor: pointer;
    border: none;
@@ -42,7 +39,7 @@ export const Close = styled.button`
 
    &::before,
    &::after {
-      background: o519ce;
+      background: #01019d;
       content: "";
       position: absolute;
       height: 33px;

@@ -1,14 +1,21 @@
 import React from 'react'
 import { Modal, BG, Close } from './styles'
 
-interface _Toggle {
-    toggleModal: React.MouseEventHandler<HTMLDivElement>;
+interface _AuxProps {
+    toggleModal: React.MouseEventHandler<HTMLElement>;
+    children: React.ReactNode
 }
 
-const ModalComponent= ({toggleModal}:_Toggle) =>(
+// interface AuxProps {
+//     children: React.ReactNode
+//   }
+
+
+const ModalComponent= ({children, toggleModal}:_AuxProps) =>(
         <>
             <Modal>
                 <Close onClick={toggleModal}/>
+                {children}
             </Modal>
             <BG onClick={toggleModal}/>
         </>
