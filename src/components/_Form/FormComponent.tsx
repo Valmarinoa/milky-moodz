@@ -27,15 +27,21 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
       onSubmit={handleSuccess} 
       validationSchema={schema}
       >
-      <Form>
-        <label>Name:</label>
-        <Field type="text" name='name' autoComplete='off' />
+        {({errors, touched}) => (
+        <Form>
+          <label>Name:</label>
+          <Field type="text" name='name' autoComplete='off' />
 
-        <label>Email address:</label>
-        <Field type="email" name='email' autoComplete='off' />
+          {touched.name && errors && <div>{errors.name}</div>}
 
-        <button type="submit" >Submit</button>
-      </Form>
+          <label>Email address:</label>
+          <Field type="email" name='email' autoComplete='off' />
+          {touched.email && errors && <div>{errors.name}</div>}
+
+          <button type="submit" >Submit</button>
+        </Form>
+        )}
+      
     </Formik>
   )
 }
