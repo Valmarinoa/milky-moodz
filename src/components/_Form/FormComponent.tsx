@@ -4,7 +4,8 @@ import { Formik,  Form, Field } from 'formik'
 
 
 interface _SubmitProps {
-  handleSuccess: React.FormEventHandler; 
+  // handleSuccess: React.FormEventHandler;
+  handleSuccess: (values: _InitValues) => void; 
 }
 
 interface _InitValues {
