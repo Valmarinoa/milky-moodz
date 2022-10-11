@@ -1,10 +1,25 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import FormComponent from '../_Form/FormComponent'
-import { Container } from './styles'
+import { Container, H3, H4, P, Senoras, SuccessContainer } from './styles'
 
-// interface _SubmitProps {
-//   handleSuccess: React.FormEventHandler;
-// }
+
+
+// const Input = ({ handleSuccess }) => (
+//   <Container>
+//     <H3>Sign up</H3>
+//     <P>See how many days are left to take off and go to Brazil!</P>
+//     <FormComponent handleSuccess={handleSuccess} />
+//   </Container>
+// )
+
+// const Success = () => (
+//   <SuccessContainer>
+//     <Senoras />
+//     <H4>MARAVILHOSO!</H4>
+//     <P>It's almost time for a real café vegano ☕ <br /> Bem forte.</P>
+
+//   </SuccessContainer>
+// )
 
 
 const ModalInner = () => {
@@ -17,19 +32,20 @@ const ModalInner = () => {
   return (
     <Container>
       {showSuccess ? (
-        <>
-          <h3>40 Days to GO!</h3>
-          <p>It's almost time for a tapioca.</p>
-        </>
+        <SuccessContainer>
+        <Senoras />
+        <H4>MARAVILHOSO!</H4>
+        <P>It's almost time for a real café vegano ☕ <br /> Bem forte.</P>
+    
+      </SuccessContainer>
+       
       ) : (
-          <>
-            <h3>Sign up</h3>
-            <p>See how many days are left to take off and go to Brazil!</p>
-            <FormComponent handleSuccess={handleSuccess}/>
-          </>
-        )
-      }
-      
+ <>
+          <H3>Sign up</H3>
+          <P>See how many days are left to take off and go to Brazil!</P>
+          <FormComponent handleSuccess={handleSuccess} />
+        </>
+    )}
     </Container>
   )
 }

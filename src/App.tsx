@@ -3,7 +3,7 @@ import FooterComponent from "./components/_Footer/FooterComponent"
 import HeaderComponent from "./components/_Header/HeaderComponent"
 import ImgBox from "./components/_ImgBox/ImgBox"
 import './styles/globals.css'
-import { Button, GlobalStyle, ImageContainer, Wrapper } from "./styles/global"
+import { Button, GlobalStyle, ImageContainer, Wrapper, Author } from "./styles/global"
 import ModalComponent from "./components/_Modal/ModalComponent"
 import ModalInner from "./components/_ModalInner/ModalInner"
 
@@ -27,6 +27,9 @@ const matrix: Array<number[]> = [
 const App = () => {
   const [distance, setDistance] = useState<number>(1)
   const [showModal, setShowModal] = useState<boolean>(false)
+  const [message, setMessage] = useState<string>("Olha com ela vem!")
+  const firstMessage = "Olha com ela vem.."
+  const secondMessage = "Nosssa, UAL."
 
   //calculate the distance between the cursor and the center/middle of the browser
   // Math.pow(i, z) uses the first argument as a base(num) and takes that to the power of the given exponent(3)
@@ -61,6 +64,13 @@ const App = () => {
     setShowModal((showModal => !showModal))
   }
 
+  const toggleMessageIn:React.MouseEventHandler = () => {
+    setMessage(()=> secondMessage)
+  }
+  const toggleMessageOut:React.MouseEventHandler = () => {
+    setMessage(()=> firstMessage)
+  }
+
 
   return (
     <>
@@ -77,10 +87,13 @@ const App = () => {
        
         <ImageContainer $isTogether={distance < 0.001}>
           
-          <Button onClick={toggleModal}>Vem falar oi!</Button>
+          <Button onClick={toggleModal} onMouseEnter={toggleMessageIn} onMouseLeave={toggleMessageOut}>{message}</Button>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} percent={distance}/>
+            
           ))}
+          
+          <Author $isTogether={distance < 0.001}>Photographer: Tinko Czetwertynski</Author>
         </ImageContainer>
       </Wrapper>
      

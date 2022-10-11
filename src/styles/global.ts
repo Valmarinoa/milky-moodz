@@ -51,23 +51,19 @@ export const ImageContainer = styled.div.attrs<{ $isTogether: boolean }>(
      width: 400px;
      
    `;
-   
-   
-// export const Wrapper = styled.section.attrs<{ $color:number }>(
-//      ({ $color }) => ({
-//           style :{
-//                backgroundColor:`hsl(${$color}, 89%, 39%)`
-//           }
-//      })
-//    )
-//    <{ $color:number }>`
-//    /* background: #006834; */
-//      display:flex;
-//      justify-content: center;
-//      align-items: center;
-//      height: 100vh;
-//      width: 100vw;
-//    `;
+
+export const Author = styled.p.attrs<{ $isTogether: boolean }>(
+     ({ $isTogether }) => ({
+       style: {
+         opacity: $isTogether ? 1: 0,
+       },
+     })
+   )
+   <{ $isTogether: boolean }>`
+     color: #fbfbfb;
+     font-size: 10px
+   `;
+
 export const Wrapper = styled.section.attrs<{ $color:number }>(
      ({ $color }) => ({
           style :{
@@ -94,11 +90,12 @@ export const AbsoluteCenter = css`
 
 export const Button = styled.button`
      ${AbsoluteCenter};
+     /* -webkit-text-fill-color: transparent; */
      background: transparent;
      border-radius: 100%;
      border: 2px solid #fbfbfb;
      cursor: pointer;
-     font-size: 34px;
+     font-size: 24px;
      font-weight: 600;
      line-height: 1;
      text-transform: uppercase;

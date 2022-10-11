@@ -1,6 +1,7 @@
 import React from 'react'
 import * as Yup from 'yup'
-import { Formik,  Form, Field } from 'formik'
+import { Formik,  Form, useField} from 'formik'
+import {Input, Label, Error, Submit} from './styles'
 
 
 interface _SubmitProps {
@@ -10,7 +11,29 @@ interface _SubmitProps {
 
 interface _InitValues {
   name: string;
-  email: string
+  email: string;
+}
+
+interface _Props {
+  name: string;
+  type: string;
+  label: string;
+  autoComplete: string
+}
+
+const InputComponent = ({label, ...props}:_Props) => {
+
+  const [field, meta] = useField(props)
+
+  console.log("props:", props)
+  console.log("label:",label)
+
+  return (
+<Label>
+  {label}: {meta.error && meta.touched &&<Error>{meta.error}</Error>}
+  <Input {...props} {...field}/>
+</Label>
+  )
 }
 
 const FormComponent = ({ handleSuccess }: _SubmitProps) => {
@@ -33,16 +56,18 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
         {/* this allows to access the metadat, fielda and the initial values */}
         {({errors, touched}) => (
         <Form>
-          <label>Name:</label>
+          <InputComponent name="name" type="text" label="Name" autoComplete="off" />
+          <InputComponent name="email" type="email" label="Email" autoComplete="off"/>
+
+          <Submit type="submit" >Submit</Submit> 
+          {/* <label>Name:</label>
           <Field type="text" name='name' autoComplete='off' />
 
           {touched.name && errors && <div>{errors.name}</div>}
 
           <label>Email address:</label>
           <Field type="email" name='email' autoComplete='off' />
-          {touched.email && errors && <div>{errors.name}</div>}
-
-          <button type="submit" >Submit</button>
+          {touched.email && errors && <div>{errors.name}</div>}*/}
         </Form>
         )}
       

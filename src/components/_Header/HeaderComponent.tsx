@@ -17,7 +17,7 @@ justify-content: center;
 padding: 80px;
 
 @media (max-width: 700px){
-  padding: 60px 15px 15px 15px;
+  padding: 92px 15px 15px 15px;
 }
 `
 

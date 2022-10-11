@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Counter, H2Counters } from './styles'
+import { Counter, H2Counters, CounterContainer } from './styles'
 
 const CountDownComponent = () => {
   const [dias, setDias] = useState<number>()
@@ -7,7 +7,7 @@ const CountDownComponent = () => {
   const [minutos, setMinutos] = useState<number>()
   const [segundos, setSegundos] = useState<number>()
 
- 
+
 
   const contador = function () {
     var diaFinal = new Date("Nov 19, 2022").getTime();
@@ -29,7 +29,18 @@ const CountDownComponent = () => {
 
   return (
     <Counter>
-      <H2Counters>{dias}</H2Counters><H2Counters>:{horas}</H2Counters><H2Counters>:{minutos}</H2Counters><H2Counters>:{segundos}</H2Counters>
+      <CounterContainer>Dias
+        <H2Counters>{dias}</H2Counters>
+      </CounterContainer>
+      <CounterContainer>Hrs
+        <H2Counters>{horas}</H2Counters>
+      </CounterContainer>
+      <CounterContainer>Min
+        <H2Counters>{minutos}</H2Counters>
+      </CounterContainer>
+      <CounterContainer>Sec
+        <H2Counters>{segundos}</H2Counters>
+      </CounterContainer>
     </Counter>
 
   )

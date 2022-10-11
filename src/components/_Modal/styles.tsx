@@ -7,7 +7,7 @@ export const Modal = styled.div`
    background-color: #fbfbfbfb;
    box-sizing: border-box;
    padding: 60px;
-   max-width: 800px;
+   max-width: 560px;
    width: calc(100vw - 60px);
    z-index: 10;
 
@@ -38,7 +38,7 @@ export const Close = styled.button`
 
    &::before,
    &::after {
-      background: #01019d;
+      background: #006834;
       content: "";
       position: absolute;
       height: 33px;

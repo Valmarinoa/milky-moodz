@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const Counter = styled.div`
   left: 50%;
-  top:2%;
+  top:5%;
+  width: 100%;
   position: absolute;
   transform: translateX(-50%);
   display: flex;
@@ -14,15 +15,25 @@ export const Counter = styled.div`
   z-index: 99;
   color: #000000;
 `
+export const CounterContainer = styled.div`
+  width: 15%;
+  height: 28% ;
+  overflow: visible;
+  color: #FBFBFB;
+  text-align: center;
+  /* display: flex; */
+`
 
 export const H2Counters = styled.h2`
   position: relative;
-  border: 2px solid white;
+  border: 1px solid white;
+  overflow: visible;
+  /* background-color: #FBFBFB; */
   /* width: 2vw; */
-  line-height: 100%;
+  line-height: 130%;
   text-align: center;
   color: #FBFBFB;
-  font-size: 2vw;
+  font-size: 2em;
   padding: 4%;
   border-radius: 50%;
   `
