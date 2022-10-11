@@ -2,10 +2,15 @@ import React, {useState } from 'react'
 import FormComponent from '../_Form/FormComponent'
 import { Container } from './styles'
 
+// interface _SubmitProps {
+//   handleSuccess: React.FormEventHandler;
+// }
+
+
 const ModalInner = () => {
   const [showSuccess, setShowSuccess] = useState<boolean>(false)
 
-  const handleSuccess:React.FormEventHandler = () => {
+  const handleSuccess = () => {
     setShowSuccess(true)
   }
 

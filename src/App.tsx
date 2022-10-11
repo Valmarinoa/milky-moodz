@@ -70,16 +70,20 @@ const App = () => {
         <ModalInner />
       </ModalComponent> 
       }
+      
       <HeaderComponent />
       <FooterComponent />
-      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(240 - distance * 40)}>
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(140 - distance * -30)}>
+       
         <ImageContainer $isTogether={distance < 0.001}>
+          
           <Button onClick={toggleModal}>Vem falar oi!</Button>
           {matrix.map(([x, y], i) => (
             <ImgBox key={i} x={x} y={y} percent={distance}/>
           ))}
         </ImageContainer>
       </Wrapper>
+     
     </>
   )
 }

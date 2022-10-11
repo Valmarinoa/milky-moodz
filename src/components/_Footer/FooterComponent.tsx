@@ -6,8 +6,8 @@ const FooterComponent = () => {
   return (
     <Footer>
       <H2>Nov 19</H2>
-      <H2Middle> LATAM Tour</H2Middle>
-      <H2>Dec 14</H2>
+      <H2Middle></H2Middle>
+      <H2>Dec 03</H2>
     </Footer>
   )
 }

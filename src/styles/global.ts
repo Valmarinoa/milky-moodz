@@ -21,7 +21,7 @@ import styled,{createGlobalStyle, css} from "styled-components"
         overflow: hidden;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        background: #2828e6;
+        background: #006834;
         font-family: 'Work Sans', sans-serif;
         font-weight: 500;
     }
@@ -49,22 +49,41 @@ export const ImageContainer = styled.div.attrs<{ $isTogether: boolean }>(
      position: relative;
      height: 600px;
      width: 400px;
+     
    `;
    
+   
+// export const Wrapper = styled.section.attrs<{ $color:number }>(
+//      ({ $color }) => ({
+//           style :{
+//                backgroundColor:`hsl(${$color}, 89%, 39%)`
+//           }
+//      })
+//    )
+//    <{ $color:number }>`
+//    /* background: #006834; */
+//      display:flex;
+//      justify-content: center;
+//      align-items: center;
+//      height: 100vh;
+//      width: 100vw;
+//    `;
 export const Wrapper = styled.section.attrs<{ $color:number }>(
      ({ $color }) => ({
           style :{
-               backgroundColor:`hsl(${$color}, 79%, 53%)`
+               backgroundColor:`hsl(${$color}, 100%, 19%)`
           }
      })
    )
    <{ $color:number }>`
+   background: #006834;
      display:flex;
      justify-content: center;
      align-items: center;
      height: 100vh;
      width: 100vw;
    `;
+
 
 export const AbsoluteCenter = css`
      left: 50%;

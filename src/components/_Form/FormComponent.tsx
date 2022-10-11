@@ -25,8 +25,12 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
     <Formik
       initialValues={initialValues}
       onSubmit={handleSuccess} 
+      // to use the new schema, we create a new prop
       validationSchema={schema}
       >
+        
+        {/*  Call on the schema variable to understand if there have been any interactions or errors according to the schema.*/}
+        {/* this allows to access the metadat, fielda and the initial values */}
         {({errors, touched}) => (
         <Form>
           <label>Name:</label>

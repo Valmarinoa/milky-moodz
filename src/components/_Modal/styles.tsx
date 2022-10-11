@@ -27,7 +27,6 @@ export const BG = styled.div`
 `
 
 export const Close = styled.button`
-cursor: pointer;
    background: transparent;
    cursor: pointer;
    border: none;

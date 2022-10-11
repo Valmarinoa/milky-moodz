@@ -15,7 +15,7 @@ const ImgBox = ({ x, y, percent }: _MatrixProps) => {
     setPosition([Math.random() * 400 - x * 100 - 50, Math.random() * 600 - y * 100 - 50])
   }, [x, y])
 
-  console.log(position)
+  // console.log(position)
 
 
   return (
