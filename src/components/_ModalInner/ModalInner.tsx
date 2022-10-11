@@ -36,13 +36,11 @@ const ModalInner = () => {
         <Senoras />
         <H4>MARAVILHOSO!</H4>
         <P>It's almost time for a real café vegano ☕ <br /> Bem forte.</P>
-    
       </SuccessContainer>
-       
       ) : (
- <>
+        <>
           <H3>Sign up</H3>
-          <P>See how many days are left to take off and go to Brazil!</P>
+          <P>Just for the sake of it 😊🦭</P>
           <FormComponent handleSuccess={handleSuccess} />
         </>
     )}
