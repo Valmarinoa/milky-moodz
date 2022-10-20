@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.47a5c0dd.css",
-    "main.js": "/static/js/main.cd863405.js",
+    "main.js": "/static/js/main.70390282.js",
     "static/js/787.f8887d40.chunk.js": "/static/js/787.f8887d40.chunk.js",
     "static/media/image1.jpeg": "/static/media/image1.1a33040b325fbf70de77.jpeg",
+    "static/media/senoras-felices.png": "/static/media/senoras-felices.a0242bb19056b40d7ae0.png",
     "static/media/BRAZILMood.svg": "/static/media/BRAZILMood.bf725e63bc9b98a8561a75dc81265198.svg",
     "index.html": "/index.html",
     "main.47a5c0dd.css.map": "/static/css/main.47a5c0dd.css.map",
-    "main.cd863405.js.map": "/static/js/main.cd863405.js.map",
+    "main.70390282.js.map": "/static/js/main.70390282.js.map",
     "787.f8887d40.chunk.js.map": "/static/js/787.f8887d40.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47a5c0dd.css",
-    "static/js/main.cd863405.js"
+    "static/js/main.70390282.js"
   ]
 }

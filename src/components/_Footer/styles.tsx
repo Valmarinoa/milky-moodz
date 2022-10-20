@@ -5,7 +5,12 @@ export const Footer = styled.footer`
   ${Marginals}
   bottom: 0;
   justify-content: space-between;
-  padding: 15px
+  padding: 15px;
+
+  @media (max-width: 400px) {
+    position: absolute;
+    bottom: 0;
+  }
 `
 
 export const H2 = styled.h2`

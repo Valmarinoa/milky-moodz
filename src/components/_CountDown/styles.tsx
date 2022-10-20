@@ -14,6 +14,10 @@ export const Counter = styled.div`
   width: 400px;
   z-index: 99;
   color: #000000;
+
+  @media (max-width: 400px) {
+    width: 95%;
+  }
 `
 export const CounterContainer = styled.div`
   width: 15%;

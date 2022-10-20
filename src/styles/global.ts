@@ -49,6 +49,11 @@ export const ImageContainer = styled.div.attrs<{ $isTogether: boolean }>(
      position: relative;
      height: 600px;
      width: 400px;
+
+     @media (max-width: 400px) {
+      height: 455px;
+     width: 304px;
+    }
      
    `;
 
@@ -108,6 +113,10 @@ export const Button = styled.button`
      font-size: 24px;
      width: 220px;
    }
+
+   @media (max-width: 400px) {
+    font-size: 18px;
+  }
    `
 
   

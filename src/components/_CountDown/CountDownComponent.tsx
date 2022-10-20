@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Counter, H2Counters, CounterContainer } from './styles'
 
 const CountDownComponent = () => {
-  const [dias, setDias] = useState<number>()
-  const [horas, setHoras] = useState<number>()
-  const [minutos, setMinutos] = useState<number>()
-  const [segundos, setSegundos] = useState<number>()
+  const [dias, setDias] = useState<number>(0o0)
+  const [horas, setHoras] = useState<number>(0o0)
+  const [minutos, setMinutos] = useState<number>(0o0)
+  const [segundos, setSegundos] = useState<number>(0o0)
 
 
 
