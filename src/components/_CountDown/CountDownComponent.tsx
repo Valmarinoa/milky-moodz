@@ -10,7 +10,7 @@ const CountDownComponent = () => {
 
 
   const contador = function () {
-    var diaFinal = new Date("Nov 19, 2022").getTime();
+    var diaFinal = new Date("Mar 01, 2023").getTime();
     var hoy = new Date().getTime();
     var falta = diaFinal - hoy;
     setDias(Math.floor(falta / (1000 * 60 * 60 * 24)));
