@@ -19,6 +19,16 @@ height: 100px;
 width: 100px;
 position: relative;
 background-position: ${({$initialX, $initialY}:_MatrixProps) => 
-  `-${$initialX * 100}px -${$initialY * 100}px`}
+  `-${$initialX * 100}px -${$initialY * 100}px`};
+
+
+  @media (max-width: 400px) {
+    height: 76px;
+    width: 76px;
+    background-size: 380px 580px;
+    background-position: ${({$initialX, $initialY}:_MatrixProps) => 
+  `-${$initialX * 100}px -${$initialY * 100}px`};
+  }
+
 `
 
