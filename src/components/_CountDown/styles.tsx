@@ -36,8 +36,9 @@ export const H2Counters = styled.h2`
   /* width: 2vw; */
   line-height: 130%;
   text-align: center;
-  color: #FBFBFB;
+  color: #fbfbfb;
   font-size: 2em;
   padding: 4%;
   border-radius: 50%;
-  `
+  animation: 2s infinite pulse;
+`;

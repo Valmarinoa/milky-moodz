@@ -33,19 +33,19 @@ const ModalInner = () => {
     <Container>
       {showSuccess ? (
         <SuccessContainer>
-        <Senoras />
-        <H4>MARAVILHOSO!</H4>
-        <P>It's almost time for a real café vegano ☕ <br /> Bem forte.</P>
-      </SuccessContainer>
+          <Senoras />
+          <H4>MARAVILHOSO!</H4>
+          <P>Tô indo, me espera. 🍹🌛</P>
+        </SuccessContainer>
       ) : (
         <>
-          <H3>Sign up</H3>
-          <P>Just for the sake of it 😊🦭</P>
+          <H3>Vambora!</H3>
+          <P>Fala oi amor..</P>
           <FormComponent handleSuccess={handleSuccess} />
         </>
-    )}
+      )}
     </Container>
-  )
+  );
 }
 
 export default ModalInner

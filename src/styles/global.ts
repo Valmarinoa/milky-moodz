@@ -1,7 +1,19 @@
-import styled,{createGlobalStyle, css} from "styled-components"
+import styled, { createGlobalStyle, css } from "styled-components"
+import image from '../assets/bg.png'
 
 
- export const GlobalStyle = createGlobalStyle` 
+export const GlobalStyle = createGlobalStyle` 
+ 
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: rgb(255, 255 ,255) 0 0 0px
+  }
+  50% {
+    opacity: .2;
+    box-shadow: rgb(255, 255, 255) 0px 0px 30px;
+  }
+}
      
      @keyframes glow {
           0% {
@@ -21,9 +33,13 @@ import styled,{createGlobalStyle, css} from "styled-components"
         overflow: hidden;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        background: #006834;
+        background: rgb(122, 183, 142);
         font-family: 'Work Sans', sans-serif;
         font-weight: 500;
+        background-image: url(${image});
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-position: bottom
     }
    `
 
@@ -72,7 +88,7 @@ export const Author = styled.p.attrs<{ $isTogether: boolean }>(
 export const Wrapper = styled.section.attrs<{ $color:number }>(
      ({ $color }) => ({
           style :{
-               backgroundColor:`hsl(${$color}, 100%, 19%)`
+         backgroundColor: `hsl(${$color}, 100%, 19%, 90%)`,
           }
      })
    )

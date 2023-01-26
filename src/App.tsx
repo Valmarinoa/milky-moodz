@@ -75,30 +75,38 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      { showModal &&
-       <ModalComponent toggleModal={toggleModal}>
-        <ModalInner />
-      </ModalComponent> 
-      }
-      
+      {showModal && (
+        <ModalComponent toggleModal={toggleModal}>
+          <ModalInner />
+        </ModalComponent>
+      )}
+
       <HeaderComponent />
       <FooterComponent />
-      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={Math.round(140 - distance * -30)}>
-       
+      <Wrapper
+        onMouseMove={handleMove}
+        onTouchMove={handleTouchMove}
+        $color={Math.round(130 - distance * -90)}
+      >
         <ImageContainer $isTogether={distance < 0.001}>
-          
-          <Button onClick={toggleModal} onMouseEnter={toggleMessageIn} onMouseLeave={toggleMessageOut}>{message}</Button>
+          <Button
+            onClick={toggleModal}
+            onMouseEnter={toggleMessageIn}
+            onMouseLeave={toggleMessageOut}
+          >
+            {message}
+          </Button>
           {matrix.map(([x, y], i) => (
-            <ImgBox key={i} x={x} y={y} percent={distance}/>
-            
+            <ImgBox key={i} x={x} y={y} percent={distance} />
           ))}
-          
-          <Author $isTogether={distance < 0.001}>Photographer: Tinko Czetwertynski</Author>
+
+          <Author $isTogether={distance < 0.001}>
+            Photographer: Tinko Czetwertynski
+          </Author>
         </ImageContainer>
       </Wrapper>
-     
     </>
-  )
+  );
 }
 
 export default App;
