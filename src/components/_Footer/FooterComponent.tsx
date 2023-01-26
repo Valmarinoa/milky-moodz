@@ -5,11 +5,11 @@ import {Footer, H2, H2Middle} from './styles'
 const FooterComponent = () => {
   return (
     <Footer>
-      <H2>Nov 19</H2>
+      <H2>Feb 24</H2>
       <H2Middle></H2Middle>
-      <H2>Dec 03</H2>
+      <H2>Vamos ver</H2>
     </Footer>
-  )
+  );
 }
 
 export default FooterComponent
