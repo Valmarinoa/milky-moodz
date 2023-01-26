@@ -39,8 +39,8 @@ const ModalInner = () => {
         </SuccessContainer>
       ) : (
         <>
-          <H3>Vambora!</H3>
-          <P>Fala oi amor..</P>
+          <H3>KD MEU AMOR</H3>
+          <P>Vem aqui falar me beijar amor..</P>
           <FormComponent handleSuccess={handleSuccess} />
         </>
       )}

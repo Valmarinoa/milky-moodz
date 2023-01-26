@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         background-image: url(${image});
         background-size: cover;
-        background-blend-mode: multiply;
+        background-blend-mode:  difference, luminosity;
         background-position: bottom
     }
    `
