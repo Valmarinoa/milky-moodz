@@ -38,8 +38,9 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         background-image: url(${image});
         background-size: cover;
-        background-blend-mode:  difference, luminosity;
-        background-position: bottom
+        background-blend-mode: difference;
+        background-position: bottom;
+        
     }
    `
 
@@ -89,6 +90,7 @@ export const Wrapper = styled.section.attrs<{ $color:number }>(
      ({ $color }) => ({
           style :{
          backgroundColor: `hsl(${$color}, 100%, 19%, 90%)`,
+
           }
      })
    )

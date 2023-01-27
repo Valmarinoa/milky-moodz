@@ -40,7 +40,7 @@ const ModalInner = () => {
       ) : (
         <>
           <H3>KD MEU AMOR</H3>
-          <P>Vem aqui falar me beijar amor..</P>
+          <P>Vem aqui me beijar amor..</P>
           <FormComponent handleSuccess={handleSuccess} />
         </>
       )}
