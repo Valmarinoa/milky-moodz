@@ -47,19 +47,30 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={handleSuccess} 
+      onSubmit={handleSuccess}
       // to use the new schema, we create a new prop
       validationSchema={schema}
-      >
-        
-        {/*  Call on the schema variable to understand if there have been any interactions or errors according to the schema.*/}
-        {/* this allows to access the metadat, fielda and the initial values */}
-        {({errors, touched}) => (
+    >
+      {/*  Call on the schema variable to understand if there have been any interactions or errors according to the schema.*/}
+      {/* this allows to access the metadat, fielda and the initial values */}
+      {({ errors, touched }) => (
         <Form>
-          <InputComponent name="name" type="text" label="Name" autoComplete="off" />
-          <InputComponent name="email" type="email" label="Email" autoComplete="off"/>
+          <InputComponent
+            name="name"
+            type="text"
+            label="Name"
+            autoComplete="off"
+          />
+          <InputComponent
+            name="email"
+            type="email"
+            label="Email"
+            autoComplete="off"
+          />
 
-          <Submit type="submit" >Submit</Submit> 
+          <Submit type="submit">
+            <div>Say </div> <div>I love you</div>{" "}
+          </Submit>
           {/* <label>Name:</label>
           <Field type="text" name='name' autoComplete='off' />
 
@@ -69,10 +80,9 @@ const FormComponent = ({ handleSuccess }: _SubmitProps) => {
           <Field type="email" name='email' autoComplete='off' />
           {touched.email && errors && <div>{errors.name}</div>}*/}
         </Form>
-        )}
-      
+      )}
     </Formik>
-  )
+  );
 }
 
 export default FormComponent

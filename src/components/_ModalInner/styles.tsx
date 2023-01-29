@@ -7,12 +7,12 @@ export const Container = styled.div`
 `
 
 export const H3 = styled.h3`
-  font-size: 64px;
+  font-size: 44px;
   font-weight: 600;
   line-height: 0.7;
   margin: 0;
   color: #006834;
-`
+`;
 
 export const P = styled.p`
   font-size: 16px;

@@ -28,16 +28,15 @@ export const Error = styled.span `
 export const Submit = styled.button`
   background: none;
   border: 2px solid #006834;
-  color:#006834;
+  color: #006834;
   cursor: pointer;
   float: right;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
   padding: 12px;
   text-transform: uppercase;
 
-
-  @media (max-width: 700px){
-  font-size: 16px;
-}
-`
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+`;
