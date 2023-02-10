@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.47a5c0dd.css",
-    "main.js": "/static/js/main.aaef28b4.js",
+    "main.css": "/static/css/main.a167b6b3.css",
+    "main.js": "/static/js/main.89b93bb0.js",
     "static/js/787.f8887d40.chunk.js": "/static/js/787.f8887d40.chunk.js",
-    "static/media/mountains.png": "/static/media/mountains.97508cb6f632eb2ec60f.png",
-    "static/media/image1.jpeg": "/static/media/image1.1a33040b325fbf70de77.jpeg",
+    "static/media/pool.png": "/static/media/pool.36a9b0d33f23f4dba73a.png",
+    "static/media/uluru.png": "/static/media/uluru.14c9dccc2a818bf3a3fe.png",
     "static/media/senoras-felices.png": "/static/media/senoras-felices.54f85bd5a9c40a96d1db.png",
-    "static/media/BRAZILMood.svg": "/static/media/BRAZILMood.bf725e63bc9b98a8561a75dc81265198.svg",
+    "static/media/BRAZILMood.svg": "/static/media/BRAZILMood.35b1388152b80fc6466da9564f078479.svg",
     "index.html": "/index.html",
-    "main.47a5c0dd.css.map": "/static/css/main.47a5c0dd.css.map",
-    "main.aaef28b4.js.map": "/static/js/main.aaef28b4.js.map",
+    "main.a167b6b3.css.map": "/static/css/main.a167b6b3.css.map",
+    "main.89b93bb0.js.map": "/static/js/main.89b93bb0.js.map",
     "787.f8887d40.chunk.js.map": "/static/js/787.f8887d40.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47a5c0dd.css",
-    "static/js/main.aaef28b4.js"
+    "static/css/main.a167b6b3.css",
+    "static/js/main.89b93bb0.js"
   ]
 }

@@ -7,7 +7,7 @@ const FooterComponent = () => {
     <Footer>
       <H2>Mar 23</H2>
       <H2Middle></H2Middle>
-      <H2>∞</H2>
+      <H2>We'll see</H2>
     </Footer>
   );
 }
