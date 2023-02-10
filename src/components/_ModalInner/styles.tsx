@@ -11,7 +11,7 @@ export const H3 = styled.h3`
   font-weight: 600;
   line-height: 0.7;
   margin: 0;
-  color: #006834;
+  color: #c90057;
 `;
 
 export const P = styled.p`
@@ -35,16 +35,16 @@ background-repeat: no-repeat;
 
 
 export const H4 = styled.h4`
-  color:#006834;
+  color: #c90057;
   font-size: 34px;
   font-weight: 600;
   line-height: 1;
   margin: 20px 0 0;
 
-  @media (max-width: 700px){
-  font-size: 24px;
-}
-`
+  @media (max-width: 700px) {
+    font-size: 24px;
+  }
+`;
 
 export const SuccessContainer = styled.div`
 /* max-width: 440px; */

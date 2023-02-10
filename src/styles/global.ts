@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, css } from "styled-components"
-import image from '../assets/bg.png'
+import image from '../assets/uluru.png'
 
 
 export const GlobalStyle = createGlobalStyle` 
@@ -17,10 +17,10 @@ export const GlobalStyle = createGlobalStyle`
      
      @keyframes glow {
           0% {
-               box-shadow: rgb(252, 210 ,23) 0 0 0px;
+               box-shadow: rgb(201, 0, 87) 0 0 0px;
           }
           100% {
-               box-shadow: rgb(252, 210, 23) 0 10px 100px;
+               box-shadow: rgb(201, 0, 87) 0 10px 80px;
           }
      }
 
@@ -38,8 +38,8 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         background-image: url(${image});
         background-size: cover;
-        background-blend-mode: difference;
         background-position: bottom;
+        backdrop-filter: blur(7px);
         
     }
    `
@@ -88,14 +88,13 @@ export const Author = styled.p.attrs<{ $isTogether: boolean }>(
 
 export const Wrapper = styled.section.attrs<{ $color:number }>(
      ({ $color }) => ({
-          style :{
-         backgroundColor: `hsl(${$color}, 100%, 19%, 90%)`,
+        //   style :{
+        //  backgroundColor: `hsl(${$color}, 100%, 26%, 90%)`,
 
-          }
+        //   }
      })
    )
-   <{ $color:number }>`
-   background: #006834;
+  <{ $color: number }>`
      display:flex;
      justify-content: center;
      align-items: center;

@@ -34,13 +34,16 @@ const ModalInner = () => {
       {showSuccess ? (
         <SuccessContainer>
           <Senoras />
-          <H4>MARAVILHOSO!</H4>
-          <P>Tô indo, me espera. 🍹🌛</P>
+          <H4>YESSS !!!</H4>
+          <P>Lilly is set to go🍹🌛</P>
         </SuccessContainer>
       ) : (
         <>
-          <H3>KD MEU AMOR..</H3>
-          <P>Vem aqui me beijar amor..</P>
+          <H3>Say Hi!</H3>
+          <P>
+            Your adventure is about to begin. I hope to follow all your new
+            discoveries.
+          </P>
           <FormComponent handleSuccess={handleSuccess} />
         </>
       )}

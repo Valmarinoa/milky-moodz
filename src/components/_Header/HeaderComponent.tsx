@@ -12,14 +12,14 @@ export const Logo = styled(LogoSVG)`
 `
 
 export const Header = styled.header`
-${Marginals}
-justify-content: center;
-padding: 100px;
+  ${Marginals}
+  justify-content: center;
+  padding: 90px 100px 100px 100px;
 
-@media (max-width: 700px){
-  padding: 92px 15px 15px 15px;
-}
-`
+  @media (max-width: 700px) {
+    padding: 90px 15px 15px 15px;
+  }
+`;
 
 const HeaderComponent = () => {
   return (
